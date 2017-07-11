@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lekplatser</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="/style.css" media="all" />
+</head>
+<body>
+
+	<h1>Lekplatser</h1>
+
+
+	<div class="playground-editor">
+		<form name="playgroundEditor">
+			<div>
+				<label for="pgeId">Id</label>
+				<input type="text" name="id" id="pgeId" readonly />
+			</div>
+			<div>
+				<label for="pgeName">Namn</label>
+				<input type="text" name="name" id="pgeName" />
+			</div>
+			<div>			
+				<label for="pgeLongitude">Longitud</label>
+				<input type="text" name="longitude" id="pgeLongitude" />
+			</div>
+			<div>			
+				<label for="pgeLatitude">Latitud</label>
+				<input type="text" name="latitude" id="pgeLatitude" />
+			</div>
+			<button type="submit">Spara</button>
+		</form>
+	</div>
+
+
+	<script src="/script.js"></script>
+</body>
+</html>

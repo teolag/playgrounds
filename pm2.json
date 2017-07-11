@@ -1,0 +1,6 @@
+{
+	"name": "Lekplatser",
+	"script": "server/app.js",
+	"watch": "server",
+	"ignore_watch": []
+}
