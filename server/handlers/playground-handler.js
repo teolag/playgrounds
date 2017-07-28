@@ -21,6 +21,10 @@ function update(playgroundId, playground) {
     return playgroundDB.update({ _id: playgroundId }, playground);
 }
 
+function remove(playgroundId) {
+	return playgroundDB.remove({ _id: playgroundId });
+}
+
 module.exports = {
-    createNew, getAll, get, update
+    createNew, getAll, get, update, remove
 };

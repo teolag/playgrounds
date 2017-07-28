@@ -11,6 +11,12 @@
 
 	<h1>Lekplatser</h1>
 
+	<div id="coords"></div>
+
+	<div id="playground-map"></div>
+	<div class="playground-list"></div>
+
+	<button class="playground-create-button">Ny lekpark</button>
 
 	<div class="playground-editor">
 		<form name="playgroundEditor">
@@ -23,18 +29,22 @@
 				<input type="text" name="name" id="pgeName" />
 			</div>
 			<div>			
-				<label for="pgeLongitude">Longitud</label>
+				<label for="pgeLongitude">Position</label>
 				<input type="text" name="longitude" id="pgeLongitude" />
-			</div>
-			<div>			
-				<label for="pgeLatitude">Latitud</label>
 				<input type="text" name="latitude" id="pgeLatitude" />
+				<button type="button" class="get-position-button">Här</button>
 			</div>
 			<button type="submit">Spara</button>
 		</form>
 	</div>
 
-
-	<script src="/script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiJqd1X7wNwjdxIcp3EJ86IzX_0YaAzNM&callback=initMap"></script>
+	<script async defer src="/js/PubSub.js"></script>
+	<script async defer src="/js/Geolocation.js"></script>
+	<script async defer src="/js/Playgrounds.js"></script>
+	<script async defer src="/js/PlaygroundList.js"></script>
+	<script async defer src="/js/PlaygroundEditor.js"></script>
+	<script async defer src="/js/PlaygroundMap.js"></script>
+	<script async defer src="/js/script.js"></script>
 </body>
 </html>

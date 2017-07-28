@@ -6,3 +6,31 @@ html {
 button, input, select, textarea {
 	font: inherit;
 }
+
+
+
+
+
+.playground-list {
+	padding: 1rem;
+	margin: 1rem;
+	border: 1px solid #ddd;
+	background-color: white;
+}
+.playground-list__row {
+	padding: 0.3rem;
+}
+
+
+
+.playground-editor {
+	padding: 1rem;
+	margin: 1rem;
+	border: 1px solid #ddd;
+	background-color: white;
+}
+
+#playground-map {
+	width: 100%;
+	height: 500px;
+}
