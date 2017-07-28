@@ -2,14 +2,11 @@ console.log("EXECUTE MAP");
 
 const PlaygroundMap = (function() {
 	const markers = [];
-	let map,
-		coordsDiv;
+	let map;
 
 
 
 	function init(center, zoom) {
-		coordsDiv = document.querySelector("#coords");
-
 		map = new google.maps.Map(document.getElementById('playground-map'), {zoom, center});
 
 
@@ -28,7 +25,6 @@ const PlaygroundMap = (function() {
 
 	function setPosition(position, zoom) {
 		map.panTo(position);
-		coordsDiv.textContent = `lat: ${position.lat}, lng: ${position.lng}`;
 		//map.setZoom(zoom);
 	}
 

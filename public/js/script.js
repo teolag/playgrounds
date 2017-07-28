@@ -5,6 +5,7 @@ PlaygroundList.init();
 PlaygroundEditor.init();
 
 const startPos = {lat: 59.35417, lng: 17.88704};
+const gpsInfo = document.getElementById("gpsInfo");
 
 function initMap() {
 	console.log("init map");
@@ -21,6 +22,15 @@ createButton.addEventListener("click", e => {
 
 Geolocation.addWatcher(data => {
 	console.log("Watching... Set position");
+	gpsInfo.innerHTML = `
+		Longitud: ${data.coords.longitude}<br>
+		Latitud: ${data.coords.latitude}<br>
+		Säkerhet: ${data.coords.accuracy}<br>
+		Höjd: ${data.coords.altitude}<br>
+		Höjdsäkerhet: ${data.coords.altitudeAccuracy}<br>
+		Rikting: ${data.coords.heading}<br>
+		Hastighet: ${data.coords.speed}
+	`;
 	PlaygroundMap.setPosition({lat: data.coords.latitude, lng: data.coords.longitude});
 });
 Geolocation.startWatch();
